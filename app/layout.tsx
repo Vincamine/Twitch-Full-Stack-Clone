@@ -1,6 +1,10 @@
+import { ClerkProvider } from '@clerk/nextjs';
+import { dark } from '@clerk/themes';
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+
+import { ThemeProvider } from '@/components/theme-provider';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,12 +15,33 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
-  );
+    <ClerkProvider 
+      afterSignOutUrl="/"
+      signInForceRedirectUrl="/"
+      signUpForceRedirectUrl="/" 
+      appearance={{baseTheme: dark}}>
+      <html lang="en">
+        <body className={inter.className}>
+          {/* The ThemeProvider component is a theming library for React applications. */}
+          {/** 
+            * The attribute prop specifies how the theme should be applied to your components. By setting attribute="class", we are telling the ThemeProvider to apply themes using CSS classes.
+            * The forcedTheme prop forces the theme to be dark.
+            * The storageKey prop is used to store the theme preference in local storage.
+            */}
+          <ThemeProvider
+            attribute="class"
+            forcedTheme="dark"
+            storageKey='gamehub-theme'
+          > 
+            {children}
+          </ThemeProvider>
+        </body>
+      </html>
+    </ClerkProvider>
+  )
 }
+
