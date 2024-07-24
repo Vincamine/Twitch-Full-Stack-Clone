@@ -68,16 +68,16 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - 🚀 Deployment
 
 ## Terminal
-Some used commends :
-——
-npx prisma studio
-—— Navbar && Sidebar && Recommended list
-npm install svix
-npx shadcn-ui@latest add input
-npm i query-string
-npm i zustand
-npx shadcn-ui@latest add tooltip
-npm i usehooks-ts
-npx shadcn-ui@latest add avatar
-npx shadcn-ui@latest add skeleton
-——
+Some used commends :  
+——  
+npx prisma studio  
+—— Navbar && Sidebar && Recommended list  
+npm install svix  
+npx shadcn-ui@latest add input  
+npm i query-string  
+npm i zustand  
+npx shadcn-ui@latest add tooltip  
+npm i usehooks-ts  
+npx shadcn-ui@latest add avatar  
+npx shadcn-ui@latest add skeleton  
+——  
