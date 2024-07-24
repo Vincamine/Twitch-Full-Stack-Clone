@@ -67,8 +67,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - 🗃️ MySQL
 - 🚀 Deployment
 
-## Terminal
-Some used commends :  
+## Some used commands in Terminal  
 ——  
 npx prisma studio  
 —— Navbar && Sidebar && Recommended list  
