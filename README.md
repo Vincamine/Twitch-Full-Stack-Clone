@@ -70,7 +70,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## Terminal
 Some used commends :
 ——
-npx prisma studio\n
+npx prisma studio
 —— Navbar && Sidebar && Recommended list
 npm install svix
 npx shadcn-ui@latest add input
