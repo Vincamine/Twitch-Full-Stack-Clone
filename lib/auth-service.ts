@@ -10,9 +10,7 @@ export const getSelf = async () => {
   }
 
   const user = await db.user.findUnique({
-    where: {
-      externalUserId: self.id,
-    },
+    where: { externalUserId: self.id, },
   });
 
   if (!user) {
