@@ -8,6 +8,7 @@ import React, { useEffect, useState } from "react";
 import { useSidebar } from "@/store/use-sidebar"
 import { cn } from "@/lib/utils";
 import { Toggle, ToggleSkeleton } from "./toggle";
+import { FollowingSkeleton } from "./following";
 import { RecommendedSkeleton } from "./recommended";
 import { useIsClient } from "usehooks-ts";
 
@@ -25,6 +26,7 @@ export const Wrapper = ({
     if(!isClient) return (
         <aside className="fixed left-0 flex flex-col w-[70px] lg:w-60 h-full bg-background border-r border-[#2D2E35] z-50">
             <ToggleSkeleton />
+            <FollowingSkeleton />
             <RecommendedSkeleton />
         </aside>
     );

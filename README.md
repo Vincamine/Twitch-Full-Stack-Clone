@@ -67,8 +67,9 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - 🗃️ MySQL
 - 🚀 Deployment
 
-## Some used commands in Terminal  
+## Some used bash in Terminal  
 ——  
+ngrok http --domain=inherently-national-thrush.ngrok-free.app 3000
 npx prisma studio  
 —— Navbar && Sidebar && Recommended list  
 npm install svix  
@@ -80,3 +81,8 @@ npm i usehooks-ts
 npx shadcn-ui@latest add avatar  
 npx shadcn-ui@latest add skeleton  
 ——  
+npx prisma generate -> npx prisma db push (for model Follow)
+npm i sonner
+
+--
+npx prisma generate -> npx prisma db push (for model Block: lib/block-service.ts/ db.block) 

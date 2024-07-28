@@ -1,8 +1,8 @@
 "use client";
 
-import { useSidebar } from "@/store/use-sidebar";
 import { cn } from "@/lib/utils";
 import { useEffect } from "react";
+import { useCreatorSidebar } from "@/store/use-creator-sidebar";
 import { useMediaQuery } from "usehooks-ts";
 
 // //The function is declared using a named function syntax. The children prop is typed directly within the function parameter.
@@ -31,7 +31,7 @@ interface ContainerProps {
 export const Container = ({
     children,
 } : ContainerProps) => {
-    const { collapsed, onCollapse, onExpand } = useSidebar((state) => state);
+    const { collapsed, onCollapse, onExpand } = useCreatorSidebar((state) => state);
     const matches = useMediaQuery("(max-width: 1024px)");
     useEffect(() => {
         if (matches) {
