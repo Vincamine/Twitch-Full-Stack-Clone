@@ -36,7 +36,7 @@ export const Navigation = () => {
     if(!user?.username){
         return (
             <ul className="space-y-2">
-                {[...Array(4)].map((_, i) => (
+                {[...Array(4)].map((_, i) => (  // get index
                     <NavItemSkeleton key={i} />
                 ))}
             </ul>
@@ -51,9 +51,10 @@ export const Navigation = () => {
             // </div>
             <NavItem
                 key={route.href}
-                label={route.label}
-                icon={route.icon}
-                href={route.href}
+                // label={route.label}
+                // icon={route.icon}
+                // href={route.href}
+                {...route}
                 isActive={pathname === route.href}
             />
         ))}

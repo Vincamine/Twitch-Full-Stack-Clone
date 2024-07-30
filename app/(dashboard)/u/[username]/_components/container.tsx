@@ -16,7 +16,9 @@ export const Container = ({
         collapsed,
         onCollapse,
         onExpand,
-    } = useCreatorSidebar((state) => state);
+    } = useCreatorSidebar(
+        (state) => state
+    );
     const matches = useMediaQuery(`(max-width: 1024px)`);
     useEffect(() => {
         if(matches){
