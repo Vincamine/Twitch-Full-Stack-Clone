@@ -1,7 +1,10 @@
 import { db } from "@/lib/db";
 
 export const getUserById = async (id: string) => {
-    const user = await db.user.findUnique({ where: { id }, });
+    const user = await db.user.findUnique({ 
+        where: { id }, 
+        include: {stream: true, },
+    });
     if(!user){
         throw new Error("User not found");
     }
@@ -9,6 +12,9 @@ export const getUserById = async (id: string) => {
 }
 
 export const getUserByUserName = async ( username: string) => {
-    const user = await db.user.findUnique({ where: { username }, })
+    const user = await db.user.findUnique({ 
+        where: { username },
+        include: { stream: true, },
+    })
     return user;
 }

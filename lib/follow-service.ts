@@ -17,7 +17,15 @@ export const getFollowedUsers = async () => {
                 },
             },
             include: {
-                following: true,
+                following: {
+                    include: {
+                        stream: {
+                            select: {
+                                isLive: true,
+                            },
+                        },
+                    },
+                },
             },
         });
         return followedUsers;
@@ -78,7 +86,6 @@ export const followUser = async (id: string) => {
 export const unfollowUser = async ( id: string) => {
     const self = await getSelf();
     const otherUser = await db.user.findUnique({ where: { id,}, });
-    console.log("check");
     if(!otherUser){ throw new Error("User not found"); }
     if(otherUser.id === self.id){ throw new Error("Cannot unfollow yourself")};
 

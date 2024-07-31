@@ -92,3 +92,13 @@ npx prisma generate
 npx prisma db push
 --
 npx shadcn-ui@latest add switch
+npx shadcn-ui@latest add dialog
+npx shadcn-ui@latest add select
+npx shadcn-ui@latest add alert
+
+--
+npm i @livekit/components-react@1.5.1
+npm i livekit-client@1.15.5
+npm i livekit-server-sdk@1.2.7
+npm i jwt-decode
+npm i uuid && npm i -D @types/uuid

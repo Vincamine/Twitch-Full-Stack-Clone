@@ -62,8 +62,8 @@ model Stream {
 
 model Follow {
   id          String @id @default(uuid())
-  followerId  String
-  followingId String
+  followerId  String  //foreign key
+  followingId String  //foreign key
 
   follower  User @relation(name: "Following", fields: [followerId], references: [id], onDelete: Cascade)  //SetToNull //Restrict
   following User @relation(name: "FollowedBy", fields: [followingId], references: [id], onDelete: Cascade)
