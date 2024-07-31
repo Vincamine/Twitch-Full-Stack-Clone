@@ -85,7 +85,7 @@ npx prisma generate -> npx prisma db push (for model Follow)
 npm i sonner
 
 --
-npx prisma generate -> npx prisma db push (for model Block: lib/block-service.ts/ db.block) 
+npx prisma generate && npx prisma db push (for model Block: lib/block-service.ts/ db.block) 
 -- reset db after create Stream model and add data in api/webhooks/clerk/route.ts
 npx prisma migrate reset
 npx prisma generate
