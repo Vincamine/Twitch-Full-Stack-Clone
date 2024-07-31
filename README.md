@@ -67,7 +67,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - 🗃️ MySQL
 - 🚀 Deployment
 
-## Some used bash in Terminal  
+## Some used bash in Terminal
+```sh
 ——  
 ngrok http --domain=inherently-national-thrush.ngrok-free.app 3000
 npx prisma studio  
