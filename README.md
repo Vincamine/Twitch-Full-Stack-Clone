@@ -96,7 +96,7 @@ npx shadcn-ui@latest add switch
 npx shadcn-ui@latest add dialog
 npx shadcn-ui@latest add select
 npx shadcn-ui@latest add alert
-
+npx shadcn-ui@latest add slider
 --
 npm i @livekit/components-react@1.5.1
 npm i livekit-client@1.15.5
