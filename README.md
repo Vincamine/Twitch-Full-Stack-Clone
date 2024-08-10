@@ -73,7 +73,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ngrok http --domain=inherently-national-thrush.ngrok-free.app 3000
 npx prisma studio 
 
-—— Navbar && Sidebar && Recommended list  
+—— Navbar && Sidebar && Recommended list && Community page
 npm install svix  
 npm i query-string  
 npm i zustand  
@@ -86,6 +86,7 @@ npm i jwt-decode
 npm i uuid && npm i -D @types/uuid
 npm i date-fns
 npm install uploadthing @uploadthing/react
+npm install @tanstack/react-table
 --
 npx prisma generate && npx prisma db push
 
@@ -107,4 +108,5 @@ npx shadcn-ui@latest add scroll-area
 npx shadcn-ui@latest add separator
 npx shadcn-ui@latest add label
 npx shadcn-ui@latest add textarea
+npx shadcn-ui@latest add table 
 --
