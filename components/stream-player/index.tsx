@@ -33,10 +33,7 @@ type CustomUser = {
 };
 
 interface StreamPlayerProps {
-    user: CustomUser & {
-        stream : Stream | null
-        _count: {followedBy: number }
-    };
+    user: CustomUser;
     stream: CustomStream;
     isFollowing: boolean;
 };
