@@ -71,36 +71,40 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ```sh
 ——  
 ngrok http --domain=inherently-national-thrush.ngrok-free.app 3000
-npx prisma studio  
+npx prisma studio 
+
 —— Navbar && Sidebar && Recommended list  
 npm install svix  
-npx shadcn-ui@latest add input  
 npm i query-string  
 npm i zustand  
-npx shadcn-ui@latest add tooltip  
 npm i usehooks-ts  
-npx shadcn-ui@latest add avatar  
-npx shadcn-ui@latest add skeleton  
-——  
-npx prisma generate -> npx prisma db push (for model Follow)
 npm i sonner
-
---
-npx prisma generate && npx prisma db push (for model Block: lib/block-service.ts/ db.block) 
--- reset db after create Stream model and add data in api/webhooks/clerk/route.ts
-npx prisma migrate reset
-npx prisma generate
-npx prisma db push
---
-npx shadcn-ui@latest add switch
-npx shadcn-ui@latest add dialog
-npx shadcn-ui@latest add select
-npx shadcn-ui@latest add alert
-npx shadcn-ui@latest add slider
---
 npm i @livekit/components-react@1.5.1
 npm i livekit-client@1.15.5
 npm i livekit-server-sdk@1.2.7
 npm i jwt-decode
 npm i uuid && npm i -D @types/uuid
 npm i date-fns
+npm install uploadthing @uploadthing/react
+--
+npx prisma generate && npx prisma db push
+
+-- reset db after create Stream model and add data in api/webhooks/clerk/route.ts
+npx prisma migrate reset
+npx prisma generate
+npx prisma db push
+-- 
+npx shadcn-ui@latest add input  
+npx shadcn-ui@latest add tooltip  
+npx shadcn-ui@latest add skeleton  
+npx shadcn-ui@latest add avatar  
+npx shadcn-ui@latest add switch
+npx shadcn-ui@latest add dialog
+npx shadcn-ui@latest add select
+npx shadcn-ui@latest add alert
+npx shadcn-ui@latest add slider
+npx shadcn-ui@latest add scroll-area
+npx shadcn-ui@latest add separator
+npx shadcn-ui@latest add label
+npx shadcn-ui@latest add textarea
+--

@@ -3,7 +3,7 @@
 import { Switch } from "@/components/ui/switch";
 import { toast } from "sonner";
 import { useTransition } from "react";
-import { updateStream } from "@/actions/steam";
+import { updateStream } from "@/actions/stream";
 import { Skeleton } from "@/components/ui/skeleton";
 
 type FieldTypes = "isChatEnabled" | "isChatDelayed" | "isChatFollowersOnly";

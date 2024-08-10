@@ -19,13 +19,14 @@ export const updateStream = async ( values: Partial<Stream>) => {
         }
         
         const validData ={
+            thumbnailUrl: values.thumbnailUrl,
             name:values.name,
             isChatEnabled: values.isChatEnabled,
             isChatDelayed: values.isChatDelayed,
             isChatFollowersOnly: values.isChatFollowersOnly,
         };
 
-        const stram = await db.stream.update({
+        const stream = await db.stream.update({
             where: {
                 id: selfStream.id,
             },

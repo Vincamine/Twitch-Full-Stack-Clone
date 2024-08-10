@@ -34,15 +34,16 @@ export const UserItem = ({
           )}
         >
             <Link href={href}>
+
                 <div
                     className={cn(
                         "flex items-center w-full gap-x-4",
                         collapsed && "justify-center"
                     )}
                 >
-                <UserAvatar imageUrl={imageUrl} username={username} isLive={isLive}/>
-                {!collapsed && <p className="truncate"> {username} </p>}
-                {!collapsed && isLive && <LiveBadge className="ml-auto" />}
+                    <UserAvatar imageUrl={imageUrl} username={username} isLive={isLive}/>
+                    {!collapsed && <p className="truncate"> {username} </p>}
+                    {!collapsed && isLive && <LiveBadge className="ml-auto" />}
                 </div>
             </Link>
         </Button>

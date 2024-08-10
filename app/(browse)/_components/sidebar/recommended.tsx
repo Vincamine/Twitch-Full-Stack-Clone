@@ -3,7 +3,7 @@
 import { useSidebar } from "@/store/use-sidebar";
 import { User } from "@prisma/client";
 import { UserItem, UserItemSkeleton } from "./user-item";
-
+import { LiveBadge } from "@/components/live-badge";
 
 interface RecommendedProps {
     data: (User & {
@@ -16,7 +16,6 @@ export const Recommended = ({
 } : RecommendedProps) => {
     const { collapsed } = useSidebar((state) => state);
     const showLabel = !collapsed && data.length > 0;
-    console.log(data.length);
     return (
         <div>
             {showLabel && (
@@ -34,7 +33,14 @@ export const Recommended = ({
                         imageUrl = {user.imageUrl}
                         isLive = {user.stream?.isLive}
                     />
-                    
+                    // <li key={user.id} className="flex items-center justify-between">
+                    //     <UserItem
+                    //         username={user.username}
+                    //         imageUrl={user.imageUrl}
+                    //         isLive={user.stream?.isLive}
+                    //     />
+                    //     {user.stream?.isLive && <LiveBadge className="ml-4" />}
+                    // </li>
                 ))}
             </ul>
         </div>

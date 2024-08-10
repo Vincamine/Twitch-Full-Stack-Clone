@@ -17,7 +17,7 @@ export async function Sidebar() {
           <Following data={following} />
           <Recommended data={recommended} />
         </div>
-        </Wrapper>
+      </Wrapper>
     );
 }
 
